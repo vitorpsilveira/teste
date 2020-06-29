@@ -10,8 +10,9 @@
             margin:0;
         }
         div{
-            text-align: center;
             height: 25vh;
+            display: flex;
+            flex-direction: row;
         }
 
         .d1{
@@ -20,10 +21,15 @@
 
         .d2{
             background-color: orange;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-around;
         }
 
         .d3{
             background-color: yellow;
+            justify-content: flex-end;
+            align-items: flex-end;
         }
     </style>
 </head>
@@ -33,7 +39,8 @@
     </div>
 
     <div class="d2">
-        Div2
+        <p>Teste</p>
+        <p>Teste2</p>
     </div>
 
     <div class="d3">
