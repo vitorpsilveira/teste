@@ -10,7 +10,7 @@
         var b = "1"; //raramente usa
         const c = "casa";
 
-        function clicknobotao () {
+        function clicknobotao() {
             alert("Olá, Mundo!")
         }
 
@@ -23,28 +23,69 @@
             console.log("oi");
         }
     </script>
+
+    <style>
+        body {
+            background-color: azure;
+        }
+
+        h1 {
+            font-family: Verdana;
+            color: cadetblue;
+            font-size: 48px;
+        }
+
+        p {
+            text-align: center;
+
+        }
+
+        img {
+            max-width: 90%;
+            border: solid 2px red;
+            padding: 2px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .margem-minima {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .margem-minima input,
+        .margem-minima select,
+        .margem-minima button {
+            width: 50vw;
+        }
+    </style>
 </head>
 
 <body>
-    <div>
+    <div class="margem-minima">
         <h1>Olá, mundo</h1>
         <h5>Teste</h5>
         <p id="para">Qualquer texto</p>
     </div>
 
-    <div>
+    <div class="margem-minima">
         <img src="teste.JPG" />
         <br>
-        <a href="www.google.com">Link google</a>
+        <a href="http://www.google.com">Link google</a>
+    </div>
 
+    <div class="margem-minima">
         <input id="meuinput" type="text" oninput="atualizacaoTexto()" />
+    </div>
 
+    <div class="margem-minima">
         <select>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
         </select>
-
+    </div>
+    <div class="margem-minima">
         <button onclick="clicknobotao()">Botão</button>
     </div>
 </body>
