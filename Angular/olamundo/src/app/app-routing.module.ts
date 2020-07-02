@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MenuPageLayoutComponent } from './components/menu-page-layout/menu-page-layout.component';
 import { OlacompComponent } from './components/olacomp/olacomp.component';
 import { ImovelCardComponent } from './components/imovel-card/imovel-card.component';
+import { ImovelPageComponent } from './components/imovel-page/imovel-page.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: ImovelCardComponent,
+        component: ImovelPageComponent,
       },
       {
         path: 'exemplo',

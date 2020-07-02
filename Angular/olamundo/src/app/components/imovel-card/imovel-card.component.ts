@@ -1,25 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { ImovelModel } from 'src/app/services/imoveis-api/imovel-model';
 
 @Component({
   selector: 'app-imovel-card',
   templateUrl: './imovel-card.component.html',
   styleUrls: ['./imovel-card.component.css']
 })
-export class ImovelCardComponent implements OnInit {
+export class ImovelCardComponent implements OnChanges {
 
-  imgUrl:string = "https://mullerimoveisrj.com.br/wp-content/uploads/2017/08/A1-3.jpg";
+  @Input() imovel: ImovelModel;
 
-  address = 'Cabo Frio - RJ';
-
-  price = 5000000;
-
-  owner = "João Garcia";
-
-  type = "Venda";
+  imgUrl:string;
+  address:string;
+  price:number;
+  owner:string;
+  type:string;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
+    if(this.imovel != null){
+      this.imgUrl = this.imovel.image;
+      this.address = this.imovel.address;
+      this.price = this.imovel.price;
+      this.owner = this.imovel.owner;
+      this.type = this.imovel.type;
+    }
   }
 
 }

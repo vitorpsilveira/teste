@@ -19,6 +19,8 @@ import { MatCardModule } from '@angular/material/card';
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData} from '@angular/common';
 import locatePT from '@angular/common/locales/pt';
+import { HttpClientModule } from '@angular/common/http';
+import { ImovelPageComponent } from './components/imovel-page/imovel-page.component';
 
 registerLocaleData(locatePT, 'pt-BR');
 
@@ -28,7 +30,8 @@ registerLocaleData(locatePT, 'pt-BR');
     AppComponent,
     OlacompComponent,
     MenuPageLayoutComponent,
-    ImovelCardComponent
+    ImovelCardComponent,
+    ImovelPageComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ registerLocaleData(locatePT, 'pt-BR');
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [{
     provide: LOCALE_ID, useValue: 'pt-BR'
