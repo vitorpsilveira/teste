@@ -6,19 +6,47 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OlacompComponent } from './components/olacomp/olacomp.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuPageLayoutComponent } from './components/menu-page-layout/menu-page-layout.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { ImovelCardComponent } from './components/imovel-card/imovel-card.component';
+import { MatCardModule } from '@angular/material/card';
+
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData} from '@angular/common';
+import locatePT from '@angular/common/locales/pt';
+
+registerLocaleData(locatePT, 'pt-BR');
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    OlacompComponent
+    OlacompComponent,
+    MenuPageLayoutComponent,
+    ImovelCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [{
+    provide: LOCALE_ID, useValue: 'pt-BR'
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
